@@ -68,7 +68,7 @@
             <div class="question">
                 <p>2. 你喜歡看哪一類型的雜誌？</p>
                 <label><input type="radio" name="q2" value="A"> A）管理、財經、趨勢類</label><br>
-                <label><input type="radio" name="q2" value="B"> 旅遊、美食、時尚類</label><br>
+                <label><input type="radio" name="q2" value="B"> B）旅遊、美食、時尚類</label><br>
                 <label><input type="radio" name="q2" value="C"> C）心靈、散文、家庭類</label><br>
                 <label><input type="radio" name="q2" value="D"> D）科技、專業、藝術類</label>
             </div>
@@ -139,15 +139,6 @@
 
             <button type="submit">提交</button>
         </form>
-        <div id="results">
-            <h2>統計結果</h2>
-            <p>A 選項: <span id="countA">0</span></p>
-            <p>B 選項: <span id="countB">0</span></p>
-            <p>C 選項: <span id="countC">0</span></p>
-            <p>D 選項: <span id="countD">0</span></p>
-            <p id="result-message"></p>
-        </div>
-    </div>
     <script src="script.js">
 document.getElementById('survey-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -176,5 +167,17 @@ document.getElementById('survey-form').addEventListener('submit', function(event
     document.getElementById('result-message').textContent = resultMessage;
 });
 </script>
+
+        
+        <div id="results">
+            <h2>統計結果</h2>
+            <p>D 型: <span id="countA">0</span></p>
+            <p>i 型: <span id="countB">0</span></p>
+            <p>S 型: <span id="countC">0</span></p>
+            <p>C 型: <span id="countD">0</span></p>
+            <p id="result-message"></p>
+        </div>
+    </div>
+
 </body>
 </html>
