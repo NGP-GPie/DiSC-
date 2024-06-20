@@ -181,13 +181,9 @@
                 document.getElementById('countD').textContent = counts.D;
 
                 let maxCount = Math.max(counts.A, counts.B, counts.C, counts.D);
-                let resultMessage = "目前狀態次數最高的是主要特質，而人會因為時間、環境、對象、心情而有所改變";
+                let resultMessage = "而人會因為時間、環境、對象、心情而有所改變，如果想詳細解析，可以點下面連結";
 
-   // 新增的文字
-        let additionalMessage = "如果想詳細解析，可以點下面連結。";
 
-        // 合併成最終訊息
-        let finalMessage = resultMessage + "\n" + additionalMessage; // 使用 \n 換行
                 
                 
                 document.getElementById('result-message').textContent = resultMessage;
@@ -196,7 +192,7 @@
 
         
         <div id="results">
-            <h2>統計結果</h2>
+            <h2>目前狀態次數最高的是主要特質</h2>
             <p>D 型: <span id="countA">0</span></p>
             <p>i 型: <span id="countB">0</span></p>
             <p>S 型: <span id="countC">0</span></p>
