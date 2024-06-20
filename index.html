@@ -139,34 +139,34 @@
 
             <button type="submit">提交</button>
         </form>
-    <script src="script.js">
-document.getElementById('survey-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    <script>
+            document.getElementById('survey-form').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-    const questions = 10;
-    const counts = { A: 0, B: 0, C: 0, D: 0 };
+                const questions = 10;
+                const counts = { A: 0, B: 0, C: 0, D: 0 };
 
-    for (let i = 1; i <= questions; i++) {
-        const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
-        if (selectedOption) {
-            counts[selectedOption.value]++;
-        } else {
-            alert(`請回答第 ${i} 題！`);
-            return;
-        }
-    }
+                for (let i = 1; i <= questions; i++) {
+                    const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (selectedOption) {
+                        counts[selectedOption.value]++;
+                    } else {
+                        alert(`請回答第 ${i} 題！`);
+                        return;
+                    }
+                }
 
-    document.getElementById('countA').textContent = counts.A;
-    document.getElementById('countB').textContent = counts.B;
-    document.getElementById('countC').textContent = counts.C;
-    document.getElementById('countD').textContent = counts.D;
+                document.getElementById('countA').textContent = counts.A;
+                document.getElementById('countB').textContent = counts.B;
+                document.getElementById('countC').textContent = counts.C;
+                document.getElementById('countD').textContent = counts.D;
 
-    let maxCount = Math.max(counts.A, counts.B, counts.C, counts.D);
-    let resultMessage = "目前狀態次數最高的是主要特質，而人會因為時間、環境、對象、心情而有所改變";
+                let maxCount = Math.max(counts.A, counts.B, counts.C, counts.D);
+                let resultMessage = "目前狀態次數最高的是主要特質，而人會因為時間、環境、對象、心情而有所改變";
 
-    document.getElementById('result-message').textContent = resultMessage;
-});
-</script>
+                document.getElementById('result-message').textContent = resultMessage;
+            });
+        </script>
 
         
         <div id="results">
